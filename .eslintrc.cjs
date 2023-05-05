@@ -71,7 +71,7 @@ module.exports = {
 			'error',
 			{
 				forbidDefaultForRequired: true,
-				functions: 'defaultArguments',
+				// functions: 'defaultArguments',
 			},
 		],
 		// Allow use of arrow functions.
