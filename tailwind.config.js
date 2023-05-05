@@ -3,7 +3,19 @@
 export default {
 	content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
 	theme: {
-		extend: {},
+		extend: {
+			colors: {
+				'neutral-100': 'hsl(0, 0%, 98%)',
+				'neutral-200': 'hsl(0, 0%, 41%)',
+				'neutral-300': 'hsl(0, 0%, 8%)',
+			},
+			fontSize: {
+				body: '18px',
+			},
+			fontFamily: {
+				sans: ['Epilogue', 'sans-serif'],
+			},
+		},
 	},
 	plugins: [],
 }
