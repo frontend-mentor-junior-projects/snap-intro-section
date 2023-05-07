@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import Icons from 'components/Icons'
+import utils from 'components/utils'
 
 type AccordionProps = {
 	children: string
@@ -30,7 +31,7 @@ const Accordion = ({ children, content }: AccordionProps) => {
 						isAccordionOpen ? 'rotate-180' : 'rotate-0'
 					} transition duration-300 ease-in-out flex items-center`}
 				>
-					<Icons.ArrowUp />
+					<Icons.ArrowUp stroke={utils.Colors['neutral-200']} />
 				</div>
 			</div>
 
