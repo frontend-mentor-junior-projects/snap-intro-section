@@ -4,9 +4,10 @@ const Colors = {
 	'neutral-300': 'hsl(0, 0%, 8%)',
 }
 
-const NAVIGATION_LINKS: [
-	{ name: string; subLinks?: { name: string; image?: string }[] }
-] = [
+const NAVIGATION_LINKS: {
+	name: string
+	subLinks?: { name: string; image?: string }[]
+}[] = [
 	{
 		name: 'Features',
 		subLinks: [
