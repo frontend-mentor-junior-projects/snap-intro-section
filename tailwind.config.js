@@ -11,9 +11,14 @@ export default {
 			},
 			fontSize: {
 				body: '18px',
+				'title-desktop': '64px',
 			},
 			fontFamily: {
 				sans: ['Epilogue', 'sans-serif'],
+			},
+			backgroundImage: {
+				'hero-mobile': '../public/assets/images/image-hero-mobile.png',
+				'hero-desktop': '../public/assets/images/image-hero-desktop.png',
 			},
 		},
 	},
