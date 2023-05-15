@@ -19,8 +19,8 @@ export const Default: Story = {
 	play: async ({ canvasElement }) => {
 		const canvas = within(canvasElement)
 
-		const mobileMenu = canvas.getByRole('button', {})
-		await userEvent.click(mobileMenu)
+		const hambugerMenu = canvas.getByRole('button', {})
+		await userEvent.click(hambugerMenu)
 
 		const sideBar = canvas.getByText('Login')
 

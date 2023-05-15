@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import Icons from 'components/Icons'
-import utils from 'components/utils'
+import utils from 'utils'
 
 type AccordionProps = {
 	children: string

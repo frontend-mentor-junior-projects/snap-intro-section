@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
 
 import Icons from 'components/Icons'
-import utils from 'components/utils'
 import useClickOutsideToClose from 'hooks/useClickOutsideToClose'
+import utils from 'utils'
 
 type DropdownProps = {
 	label: string | React.ReactNode
@@ -10,18 +10,18 @@ type DropdownProps = {
 }
 
 const Dropdown = ({ label, options }: DropdownProps) => {
-	const [isOpen, setIsOpen] = useState(false)
+	const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
 	const toggleDropdown = () => {
-		setIsOpen(!isOpen)
+		setIsDropdownOpen(!isDropdownOpen)
 	}
 
 	const closeDropdown = () => {
-		setIsOpen(false)
+		setIsDropdownOpen(false)
 	}
 
 	const dropdownContainerRef = useRef<HTMLDivElement>(null)
-	useClickOutsideToClose(dropdownContainerRef, setIsOpen)
+	useClickOutsideToClose(dropdownContainerRef, setIsDropdownOpen)
 
 	return (
 		<div className='relative inline' ref={dropdownContainerRef}>
@@ -29,7 +29,7 @@ const Dropdown = ({ label, options }: DropdownProps) => {
 				<div className='flex flex-row items-center'>
 					<p
 						className={` mr-2 ${
-							isOpen ? 'text-neutral-300' : ''
+							isDropdownOpen ? 'text-neutral-300' : ''
 						} transition duration-300 ease-out hover:text-neutral-300`}
 					>
 						{label}
@@ -37,12 +37,12 @@ const Dropdown = ({ label, options }: DropdownProps) => {
 
 					<div
 						className={`flex items-center ${
-							isOpen ? 'rotate-180' : 'rotate-0'
+							isDropdownOpen ? 'rotate-180' : 'rotate-0'
 						} transition duration-300 ease-out`}
 					>
 						<Icons.ArrowDown
 							stroke={
-								isOpen
+								isDropdownOpen
 									? utils.Colors['neutral-300']
 									: utils.Colors['neutral-200']
 							}
@@ -52,14 +52,17 @@ const Dropdown = ({ label, options }: DropdownProps) => {
 			</button>
 
 			<div
-				className={`bg-white shadow-md rounded-md p-6 absolute top-10 left-0 ${
-					isOpen ? 'opacity-100' : 'opacity-0'
+				className={`bg-white shadow-xl rounded-md p-6 absolute top-10 left-0 ${
+					isDropdownOpen ? 'opacity-100' : 'opacity-0'
 				} transition duration-300 ease-out z-10`}
 			>
 				<ul className='space-y-6 text-neutral-200 max-w-[400px] w-max'>
 					{options.map((option) => {
 						return (
-							<li className='flex flex-row items-center hover:text-neutral-300 hover:cursor-pointer'>
+							<li
+								key={option.name}
+								className='flex flex-row items-center hover:text-neutral-300 hover:cursor-pointer'
+							>
 								{option.image && (
 									<img src={option.image} className='h-4 mr-4' alt='' />
 								)}

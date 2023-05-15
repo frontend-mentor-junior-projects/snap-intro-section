@@ -25,7 +25,15 @@ const NAVIGATION_LINKS: {
 	{ name: 'About' },
 ]
 
+const FEATURED_CLIENTS = [
+	{ name: 'databiz', image: 'assets/images/client-databiz.svg' },
+	{ name: 'audiophile', image: 'assets/images/client-audiophile.svg' },
+	{ name: 'meet', image: 'assets/images/client-meet.svg' },
+	{ name: 'maker', image: 'assets/images/client-maker.svg' },
+]
+
 export default {
 	Colors,
 	NAVIGATION_LINKS,
+	FEATURED_CLIENTS,
 }

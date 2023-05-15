@@ -1,12 +1,6 @@
 import Button from 'components/Button'
 import Header from 'components/Header'
-
-const FEATURED_CLIENTS = [
-	{ name: 'databiz', image: 'assets/images/client-databiz.svg' },
-	{ name: 'audiophile', image: 'assets/images/client-audiophile.svg' },
-	{ name: 'meet', image: 'assets/images/client-meet.svg' },
-	{ name: 'maker', image: 'assets/images/client-maker.svg' },
-]
+import utils from 'utils'
 
 function App() {
 	return (
@@ -31,7 +25,7 @@ function App() {
 					</div>
 
 					<div className='flex flex-row space-x-6 mb-24 lg:mb-0'>
-						{FEATURED_CLIENTS.map((featuredClient) => {
+						{utils.FEATURED_CLIENTS.map((featuredClient) => {
 							return (
 								<img
 									key={featuredClient.name}

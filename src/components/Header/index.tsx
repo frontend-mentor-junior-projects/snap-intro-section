@@ -3,19 +3,19 @@ import { useState } from 'react'
 import Button from 'components/Button'
 import Dropdown from 'components/Dropdown'
 import Logo from 'components/Logo'
-import utils from 'components/utils'
+import utils from 'utils'
 
-import Sidebar from './Sidebar'
+import Sidebar from './components/Sidebar'
 
 const Header = () => {
-	const [showMenu, setShowMenu] = useState(false)
+	const [showSidebar, setShowSidebar] = useState(false)
 
-	const toggleMenu = () => {
-		setShowMenu(!showMenu)
+	const toggleSidebar = () => {
+		setShowSidebar(!showSidebar)
 	}
 
-	const closeMenu = () => {
-		setShowMenu(false)
+	const dismissSidebar = () => {
+		setShowSidebar(false)
 	}
 
 	return (
@@ -25,7 +25,7 @@ const Header = () => {
 					<Logo />
 				</div>
 
-				<button id='mobile menu' type='button' onClick={toggleMenu}>
+				<button id='mobile menu' type='button' onClick={toggleSidebar}>
 					<img
 						src='assets/images/icon-menu.svg'
 						alt='mobile menu'
@@ -58,13 +58,17 @@ const Header = () => {
 					<div className='flex flex-row space-x-10 items-center'>
 						<a
 							href='/#'
-							onClick={closeMenu}
+							onClick={dismissSidebar}
 							className='hover:text-neutral-300 hover:-translate-y-1 transition duration-300 ease-out'
 						>
 							Login
 						</a>
 
-						<Button type='outline' onClick={closeMenu} className='self-center'>
+						<Button
+							type='outline'
+							onClick={dismissSidebar}
+							className='self-center'
+						>
 							Register
 						</Button>
 					</div>
@@ -72,7 +76,7 @@ const Header = () => {
 			</div>
 
 			{/* Sidebar. */}
-			<Sidebar showMenu={showMenu} onDismiss={closeMenu} />
+			<Sidebar visible={showSidebar} onDismiss={dismissSidebar} />
 		</header>
 	)
 }
