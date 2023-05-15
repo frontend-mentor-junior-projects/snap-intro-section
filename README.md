@@ -1,7 +1,7 @@
 # News Homepage
 
-<p>This is a solution to the Snap Intro Section challenge on
-  <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">
+<p>This is a solution to the News Homepage challenge on
+  <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5/hub" target="_blank">
     <strong>Frontend Mentor Challenge</strong>
   </a>
 </p>
@@ -35,7 +35,7 @@
 ## Preview
 
 <div align='center'>
-  <img src='./design/preview.png' alt='News Homepage preview image'>
+  <img src='./design/screenshot.png' alt='News Homepage preview image'>
 </div>
 
 <h2>The Challenge</h2>
