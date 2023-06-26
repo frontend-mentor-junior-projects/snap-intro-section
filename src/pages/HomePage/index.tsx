@@ -37,17 +37,18 @@ const HomePage = () => {
 					</div>
 				</div>
 
-				<img
-					src='assets/images/image-hero-mobile.png'
-					alt='hero'
-					className='mb-12 lg:hidden'
-				/>
+				<picture>
+					<source
+						srcSet='assets/images/image-hero-desktop.png'
+						media='(min-width:1024px)'
+					/>
 
-				<img
-					src='assets/images/image-hero-desktop.png'
-					alt='hero'
-					className='hidden lg:block h-[640px]'
-				/>
+					<img
+						src='assets/images/image-hero-mobile.png'
+						alt=''
+						className='mb-12 lg:mb-0 lg:h-[640px]'
+					/>
+				</picture>
 			</section>
 		</main>
 	)
