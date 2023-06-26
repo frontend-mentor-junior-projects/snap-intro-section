@@ -12,6 +12,11 @@ html {
 	scroll-behavior: smooth;
 }
 
+*:focus {
+	outline-offset: 4px;
+	outline-style: dashed;
+}
+
 .skip-link {
 	position: absolute;
 	z-index: 9999;
