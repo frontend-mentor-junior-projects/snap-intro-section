@@ -1,36 +1,8 @@
 import React from 'react'
 
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-
 import type { Preview } from '@storybook/react'
 import 'tailwindcss/tailwind.css'
-
-const CUSTOM_VIEWPORTS = {
-	mobile_320: {
-		name: 'Mobile 320',
-		type: 'mobile',
-		styles: {
-			width: '320px',
-			height: '780px',
-		},
-	},
-	mobile_375: {
-		name: 'Mobile 375',
-		type: 'mobile',
-		styles: {
-			width: '375px',
-			height: '780px',
-		},
-	},
-	desktop_1440: {
-		name: 'Desktop 1440',
-		type: 'desktop',
-		styles: {
-			width: '1440px',
-			height: '900px',
-		},
-	},
-}
+import lib from './lib'
 
 const preview: Preview = {
 	parameters: {
@@ -48,7 +20,7 @@ const preview: Preview = {
 					: a.id.localeCompare(b.id, undefined, { numeric: true }),
 		},
 		viewport: {
-			viewports: { ...INITIAL_VIEWPORTS, ...CUSTOM_VIEWPORTS },
+			viewports: { ...lib.CUSTOM_VIEWPORTS },
 		},
 		// Remove padding aroun stories.
 		// layout: 'fullscreen',
