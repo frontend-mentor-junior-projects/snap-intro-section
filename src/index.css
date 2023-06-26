@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+	--neutral-100: hsl(0, 0%, 98%);
+	--neutral-200: hsl(0, 0%, 41%);
+	--neutral-300: hsl(0, 0%, 8%);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.skip-link {
+	position: absolute;
+	z-index: 9999;
+	background-color: var(--neutral-300);
+	color: var(--neutral-100);
+	padding: 4px 16px;
+	transform: translateY(-100%);
+	transition: transform 300ms ease-in-out;
+}
+
+.skip-link:focus {
+	transform: translateY(0);
+}
