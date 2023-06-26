@@ -5,8 +5,6 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import type { Preview } from '@storybook/react'
 import 'tailwindcss/tailwind.css'
 
-import utils from '../src/components/utils'
-
 const CUSTOM_VIEWPORTS = {
 	mobile_320: {
 		name: 'Mobile 320',
