@@ -22,24 +22,7 @@ const preview: Preview = {
 		viewport: {
 			viewports: { ...lib.CUSTOM_VIEWPORTS },
 		},
-		// Remove padding aroun stories.
-		// layout: 'fullscreen',
 	},
-	// TODO: Tailwind utilties are being ignored by Storybook.
-	// decorators: [
-	// 	(Story) => {
-	// 		return (
-	// 			<div
-	// 				style={{
-	// 					backgroundColor: utils.Colors['neutral-100'],
-	// 					height: '100%',
-	// 				}}
-	// 			>
-	// 				<Story />
-	// 			</div>
-	// 		)
-	// 	},
-	// ],
 }
 
 export default preview
